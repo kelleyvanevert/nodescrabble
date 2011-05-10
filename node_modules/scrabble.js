@@ -1,0 +1,1 @@
+../lib/scrabble.js

@@ -1,0 +1,19 @@
+
+A simple scrabble game in javascript using nodejs, vows and express.
+
+Core scrabble game @ lib/scrabble.js
+* Run unit tests: vows test/scrabble-test.js
+* ..or test/play manually: node terminal.js
+I created a symbolic link in node_modules/scrabble.js for simple require("scrabble")
+ usage from any file in this or any subdirectory of this directory;
+ and a symbolic link in public/scrabble.js for the webserver.
+
+Run the webserver: node server.js
+
+TODO
+- UI sidebar: history, score table, chat
+- Interaction: ask blank letter dialog, reject?
+- Automatic game removal after T days of not being modified
+(- Browser compatibility -- firefox works I think, so I'm happy.)
+- Testing!
+

@@ -1,0 +1,48 @@
+
+<form action="/game" method="post">
+    <h2>Create a new Scrabble game</h2>
+    <p>
+        Hi there!
+    </p>
+    <p>
+        Please enter the names of the players into the box below, separated
+         by commas, and then press &quot;Create game!&quot; to create
+         a new scrabble game.
+    </p>
+    <p>
+        There are two ways of playing this browser-based version of the game:
+         <strong>locally</strong> (on your own computer only, alone against
+         yourself or with friends at home) or <strong>via the internet</strong>.
+    </p>
+    <p>
+        If you want to play via the internet, you should first (1) create
+         the game for you and your friend(s), and then (2) send the link (URL) to
+         your friend(s). <strong>Beware, the game is not cheat-proof!</strong>
+    </p>
+    <p>
+        Have mercy if it doesn't fully work yet, as I've not tested
+         the game often enough yet. It would help if you'd notify me
+         when strange things happen (please provide as much
+         information as you can).
+    </p>
+    <p>
+        Finally: have fun!
+    </p>
+    <p>
+        <input id="inputplayers" name="players" value="Jim, Bob" />
+    </p>
+    <p>
+        <input type="submit" value="Create game!" />
+    </p>
+</form>
+
+<script type="text/javascript">
+$("form").submit(function() {
+    var players = $("#inputplayers").val();
+    $.post(window.home+"/game", {players: players}, function(gameid) {
+        window.location = window.home+"/game/"+gameid;
+    });
+    return false;
+});
+</script>
+

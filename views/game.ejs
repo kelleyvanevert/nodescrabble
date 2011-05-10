@@ -1,0 +1,41 @@
+
+<ul id="players"></ul>
+
+<div id="board"></div>
+
+<div id="sidebar">
+    <p id="act">
+        <button id="act-play" class="ui-priority-primary">Play word</button>
+        <button id="act-exchange">Exchange tiles</button>
+        <button id="act-pass">Pass</button>
+    </p>
+    <p style="text-align:right; font-size:17px;">
+        You are playing <span id="playing"></span>.
+    </p>
+</div>
+
+<div class="dialog" id="choose-playmode" title="Play mode">
+    <p>
+        Who do you want to play?<br />
+        If you choose &quot;Play all players&quot;, you will be able to
+         see the rack tiles of all players.<br />
+        Otherwise, choose the appropriate player.
+    </p>
+    <select>
+        <option value="all">Play all players</option>
+    </select>
+</div>
+<div class="dialog" id="choose-exchange-tiles" title="Choose tiles">
+    <p>
+        Which tiles do you want to exchange?
+    </p>
+    <p>
+        <input type="text" />
+    </p>
+</div>
+
+<script type="text/javascript">
+    $("button").button();
+    UI.init("<%= gameid %>", new Game(<%- JSON.stringify(gamedata) %>));
+</script>
+

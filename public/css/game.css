@@ -1,0 +1,153 @@
+
+body {
+    margin:0;
+    padding:0;
+    
+    font-family:Helvetica, Arial, sans-serif;
+    font-size:13px;
+}
+
+* {
+    user-select:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+}
+input {
+    user-select:text;
+    -webkit-user-select:text;
+    -moz-user-select:text;
+}
+
+ul#players {
+    margin:0;
+    padding:0;
+    position:absolute;
+    top:15px;
+    left:35px;
+}
+ul#players li {
+    margin:0;
+    padding:4px 0;
+    list-style:none;
+    height:22px;
+    line-height:22px;
+    font-family:Georgia, "Times new Roman", serif;
+    font-size:18px;
+    font-style:italic;
+    color:#888;
+}
+.name {
+    font-family:Helvetica, Arial, sans-serif;
+    font-size:20px;
+    font-style:normal;
+    color:#000;
+}
+.turn {
+    display:none;
+}
+#players .score {
+    display:inline-block;
+    margin:0;
+    padding:3px 4px;
+    vertical-align:text-bottom;
+    height:16px;
+    font-family:Helvetica, Arial, sans-serif;
+    font-size:14px;
+    font-style:normal;
+    font-weight:bold;
+    line-height:16px;
+    color:#fff;
+    border-radius:12px;
+    -moz-border-radius:12px;
+    -webkit-border-radius:12px;
+    background:#2893ff;
+}
+
+.dialog {
+    display:none;
+}
+
+#sidebar {
+    position:absolute;
+    top:15px;
+    right:15px;
+    width:350px;
+}
+p#act {
+    margin:0;
+    padding:0;
+    text-align:right;
+}
+
+.tile {
+    padding:3px;
+    width:24px;
+    height:24px;
+    position:absolute;
+    cursor:pointer;
+    font-family:Helvetica, Arial, sans-serif;
+    font-size:22px;
+    font-weight:bold;
+    text-transform:uppercase;
+    line-height:24px;
+    text-align:center;
+    color:#3a2d20;
+    border:1px solid #debc61;
+}
+.tile.racktile {
+    background:#ffe9aa;
+}
+.tile.permanent {
+    background:#fbdd8d;
+}
+.tile.racktile.blank {
+    text-indent:-9999px;
+}
+.tile.permanent.blank {
+    color:#c00;
+}
+.tile.permanent.blank .score {
+    display:none;
+}
+.tile .score {
+    font-size:10px;
+    font-weight:normal;
+    position:relative;
+        bottom:-2px;
+        left:-1px;
+}
+
+#board {
+    height:528px;
+    width:528px;
+    position:absolute;
+        top:90px;
+        left:20px;
+    background:#dbc1ad;
+}
+.field {
+    background:#c9aa91;
+}
+.field {
+    width:32px;
+    height:32px;
+    position:absolute;
+}
+.field.start {
+    background:#ead309;
+}
+.field.w-3 {
+    background:#c42e26;
+}
+.field.w-2 {
+    background:#d96b5c;
+}
+.field.l-3 {
+    background:#486c91;
+}
+.field.l-2 {
+    background:#6c91b7;
+}
+.field.h {
+    background:#000 !important;
+}
